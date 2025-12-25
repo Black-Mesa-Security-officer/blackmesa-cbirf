@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IRF | Incident Response Force</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0f1115;
+      color: #e6e6e6;
+    }
+
+    /* ===== TOP WARNING ===== */
+    .top-warning {
+      background-color: #8b0000;
+      color: #fff;
+      font-size: 12px;
+      padding: 5px 15px;
+      font-weight: bold;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0.4; }
+    }
+
+    header {
+      background-color: #1b1e24;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid #8b0000;
+    }
+
+    header img {
+      height: 80px;
+      margin-right: 20px;
+    }
+
+    nav {
+      background-color: #14171c;
+      padding: 10px 20px;
+    }
+
+    nav a {
+      color: #e6e6e6;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff4d4d;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      border-left: 5px solid #8b0000;
+      padding-left: 10px;
+      color: #ffdddd;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    .classified {
+      color: #ff4d4d;
+      font-weight: bold;
+    }
+
+    /* ===== STATUS PANEL ===== */
+    .status-panel {
+      background-color: #14171c;
+      border: 1px solid #333;
+      padding: 20px;
+      margin-bottom: 40px;
+      font-family: "Courier New", monospace;
+    }
+
+    .status-panel span {
+      color: #ff4d4d;
+    }
+
+    /* ===== DEPLOY BUTTON ===== */
+    .deploy-btn {
+      background-color: #8b0000;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .deploy-btn:hover {
+      background-color: #b00000;
+    }
+
+    footer {
+      background-color: #1b1e24;
+      padding: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      border-top: 2px solid #333;
+    }
+
+    /* ===== CLEARANCE TEXT ===== */
+    #clearance {
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      color: #00ff99;
+      margin-bottom: 30px;
+      white-space: pre;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-warning">// INTERNAL USE ONLY //</div>
+
+  <header>
+    <img src="patch_cbirf.png" alt="IRF Insignia">
+    <div>
+      <h1>IRF</h1>
+      <span>Incident Response Force (CBIRF)</span>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#missions">Missions</a>
+    <a href="#status">Status</a>
+  </nav>
+
+  <main>
+
+    <!-- CLEARANCE VERIFIED -->
+    <div id="clearance"></div>
+
+    <!-- STATUS PANEL -->
+    <div class="status-panel">
+      INCIDENT ID : <span>BM-IRF-Δ79</span><br>
+      LOCATION : <span>REDACTED GOVERNMENT FACILITY</span><br>
+      BIOHAZARD LEVEL : <span>OMEGA</span><br>
+      CONTAINMENT : <span>FAILED</span>
+    </div>
+
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>
+        The Incident Response Force (IRF) is a designation granted to
+        HECU operators trained in full-spectrum CBRN response.
+      </p>
+      <p class="classified">
+        IRF units operate under classified federal authority.
+      </p>
+    </section>
+
+    <section id="missions">
+      <h2>Mission Profile</h2>
+      <ul>
+        <li>CBRN Neutralization & Decontamination</li>
+        <li>Priority Search & Rescue</li>
+        <li>Counter-Terror Operations</li>
+        <li>Incident Concealment</li>
+      </ul>
+
+      <button class="deploy-btn">
+        IRF DEPLOYMENT AUTHORIZED
+      </button>
+    </section>
+
+    <section id="status">
+      <h2>Operational Status</h2>
+      <p class="classified">
+        STATUS: ACTIVE — CLEARANCE VERIFIED
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © United States Government<br>
+    Incident Response Force Network<br>
+    Restricted Access
+  </footer>
+
+  <script>
+    const text = "CLEARANCE VERIFIED...\nACCESS LEVEL: IRF\nWELCOME, OPERATOR.";
+    let i = 0;
+    const speed = 40;
+    const target = document.getElementById("clearance");
+
+    function typeEffect() {
+      if (i < text.length) {
+        target.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, speed);
+      }
+    }
+
+    typeEffect();
+  </script>
+
+</body>
+</html>
