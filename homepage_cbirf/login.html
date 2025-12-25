@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IRF Secure Access</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #0b0d10;
+      color: #e6e6e6;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background-color: #14171c;
+      border: 2px solid #8b0000;
+      padding: 40px;
+      width: 360px;
+      box-shadow: 0 0 20px rgba(139,0,0,0.4);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 20px;
+      background-color: #0f1115;
+      border: 1px solid #333;
+      color: #e6e6e6;
+    }
+
+    input:disabled {
+      color: #aaa;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #8b0000;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b00000;
+    }
+
+    .warning {
+      margin-top: 20px;
+      font-size: 11px;
+      color: #ff4d4d;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-box">
+    <h1>IRF ACCESS</h1>
+    <div class="subtitle">
+      Incident Response Force<br>
+      Secure Government Network
+    </div>
+
+    <form action="index.html">
+      <label>USER ID</label>
+      <input type="text" value="HECU-IRF-0237" disabled>
+
+      <label>PASSWORD</label>
+      <input type="password" value="●●●●●●●●" disabled>
+
+      <button type="submit">LOGIN</button>
+    </form>
+
+    <div class="warning">
+      UNAUTHORIZED ACCESS IS PUNISHABLE<br>
+      BY FEDERAL LAW
+    </div>
+  </div>
+
+</body>
+</html>
